@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hometelecom: Retargeting banners</title>
+<meta name="description" content="The display banners that follow a tenant across the web after they click through from an email but don't convert.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 3.5h3.2L10 8l-2.1 1.6a12 12 0 0 0 6.5 6.5L16 13.9l4.5 1.8V19a1.6 1.6 0 0 1-1.7 1.6C10.6 20.1 3.9 13.4 3.4 5.7A1.6 1.6 0 0 1 5 3.5Z"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 5l14 14M19 5 5 19"/>
+    </symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5.5 9l6.5 6.5L18.5 9"/>
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 5.5h16a1 1 0 0 1 1 1V15a1 1 0 0 1-1 1H9.5L5 20v-4H4a1 1 0 0 1-1-1V6.5a1 1 0 0 1 1-1Z"/>
+    </symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M3 11.5 21 3l-6 18-3.2-7.3L3 11.5Z"/>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M12 2.8l2.7 5.9 6.4.7-4.8 4.4 1.3 6.4L12 16.9l-5.6 3.3 1.3-6.4-4.8-4.4 6.4-.7z"/>
+    </symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14.5 21.5V13h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.7-1.6h1.6V3.2C17.3 3.1 16.2 3 15 3c-2.6 0-4.4 1.6-4.4 4.5v2.3H7.9V13H10.6v8.5Z"/>
+    </symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M7.8 10.2v6.3M7.8 7.6v.1M11.8 16.5v-3.6c0-1.6 1-2.5 2.3-2.5s2.1 1 2.1 2.6v3.5"/>
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".9" fill="currentColor" stroke="none"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="site-header" id="site-header">
+  <div class="wrap-wide">
+    <a href="index.html#top" class="logo"><b>home</b><span>telecom</span></a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <div class="nav-item">
+        <a href="#">Broadband</a>
+        <div class="nav-dropdown">
+          <a href="#">Fibre broadband</a>
+          <a href="#">Full fibre checker</a>
+          <a href="#">Social tariffs</a>
+          <a href="#">Compare speeds</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">Utilities</a>
+        <div class="nav-dropdown">
+          <a href="#">Energy</a>
+          <a href="#">Water &amp; council tax</a>
+          <a href="#">SIM cards</a>
+          <a href="#">Sky TV</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">Contact us</a>
+        <div class="nav-dropdown">
+          <a href="#">Call 01403 216131</a>
+          <a href="#">Book a callback</a>
+          <a href="#">Live chat</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">Customer area</a>
+        <div class="nav-dropdown">
+          <a href="#">My account</a>
+          <a href="#">Make a payment</a>
+          <a href="#">Broadband speed check</a>
+          <a href="#">Network status</a>
+          <a href="#">Support</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:01403216131" class="header-phone" aria-label="Call us on 01403 216131" title="Call 01403 216131">
+        <svg><use href="#i-phone"/></svg>
+      </a>
+      <a href="#" class="btn btn-primary btn-sm">Network Status</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <svg class="icon-menu"><use href="#i-menu"/></svg>
+        <svg class="icon-close"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="site-nav-panel" id="mobile-nav">
+    <a href="#">Broadband</a>
+    <a href="#">Utilities</a>
+    <a href="#">Contact us</a>
+    <a href="#">Customer area</a>
+    <div class="mobile-cta">
+      <a href="#" class="btn btn-primary btn-block">Network Status</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero hero--compact">
+    <div class="wrap-wide hero-inner">
+      <div class="hero-copy">
+        <h1>Where these banners follow the tenant</h1>
+        <p class="lede">Retargeting banners that follow tenants across the web after they click through from an email but don't convert. They keep running until the tenant does, or the campaign window closes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad">
+    <div class="wrap-wide">
+      <div class="section-head">
+        <h2>The current banner set</h2>
+        <p>Three IAB standard sizes, each carrying the same headline and offer.</p>
+      </div>
+
+      <div class="banner-showcase">
+       <div class="banner-showcase-ads">
+
+        <div class="banner-unit">
+          <div class="ad-mock ad-mock--rect">
+            <div class="ad-mock-logo"><b>home</b><span>telecom</span></div>
+            <div class="ad-mock-stars">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg><svg width="10" height="10" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg><svg width="10" height="10" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg><svg width="10" height="10" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg><svg width="10" height="10" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg>
+              4.7 &ldquo;Excellent&rdquo; on Trustpilot
+            </div>
+            <h4>Wi-Fi sorted<br>before you move in</h4>
+            <a href="#" class="ad-mock-cta">Check availability &rarr;</a>
+          </div>
+          <div class="banner-unit-caption">
+            <span class="format-tag">300 &times; 250</span>
+            <h4>Medium Rectangle</h4>
+            <p>Social feeds and shopping sites</p>
+          </div>
+        </div>
+
+        <div class="banner-unit">
+          <div class="ad-mock ad-mock--leaderboard">
+            <div class="ad-mock-brand">
+              <div class="ad-mock-logo"><b>home</b><span>telecom</span></div>
+              <div class="ad-mock-stars">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg><svg width="9" height="9" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg><svg width="9" height="9" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg><svg width="9" height="9" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg><svg width="9" height="9" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg>
+                4.7 on Trustpilot &middot; UK-based support
+              </div>
+            </div>
+            <h4>Wi-Fi sorted before you move in</h4>
+            <a href="#" class="ad-mock-cta">Check availability &rarr;</a>
+          </div>
+          <div class="banner-unit-caption">
+            <span class="format-tag">728 &times; 90</span>
+            <h4>Leaderboard</h4>
+            <p>Desktop email inbox and news sites</p>
+          </div>
+        </div>
+
+        <div class="banner-unit">
+          <div class="ad-mock ad-mock--halfpage">
+            <div class="ad-mock-top">
+              <div class="ad-mock-logo"><b>home</b><span>telecom</span></div>
+              <div class="ad-mock-stars">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg><svg width="10" height="10" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg><svg width="10" height="10" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg><svg width="10" height="10" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg><svg width="10" height="10" viewBox="0 0 24 24" fill="#00b67a"><use href="#i-star"/></svg>
+                4.7 &ldquo;Excellent&rdquo; &middot; 19,675+ reviews
+              </div>
+              <h4>Wi-Fi sorted<br>before you move in</h4>
+              <p class="ad-mock-sub">One quick order, live before moving day.</p>
+            </div>
+            <ul class="ad-mock-features">
+              <li>UK-based support</li>
+              <li>Flexible tenant contracts</li>
+              <li>Exit fee waived if you move</li>
+            </ul>
+            <a href="#" class="ad-mock-cta">Check availability &rarr;</a>
+          </div>
+          <div class="banner-unit-caption">
+            <span class="format-tag">300 &times; 600</span>
+            <h4>Half Page</h4>
+            <p>Apps, food delivery, and shopping apps</p>
+          </div>
+        </div>
+
+       </div>
+       <div class="banner-showcase-list">
+          <h3>Where they show up</h3>
+          <ul>
+            <li>Social media feeds</li>
+            <li>Apps</li>
+            <li>Email inbox sidebars</li>
+            <li>Shopping sites</li>
+            <li>Food delivery apps</li>
+          </ul>
+       </div>
+
+      </div>
+
+      <div class="banner-note">
+        <strong>How it works:</strong> a tenant clicks through from an email but doesn't convert. A tracking pixel on hometelecom.co.uk flags them to our retargeting network (e.g. Criteo), which then keeps showing these same banners as they carry on browsing, until they either convert or the campaign window closes.
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap-wide footer-top">
+    <div class="footer-brand">
+      <a href="index.html#top" class="logo"><b>home</b><span>telecom</span></a>
+      <p>Broadband and utility specialists, connecting UK homes since 1998: one call, every big brand, real UK-based support.</p>
+      <a href="tel:01403216131" class="footer-phone"><svg><use href="#i-phone"/></svg>01403 216131</a>
+    </div>
+    <div class="footer-col">
+      <h5>Find out more</h5>
+      <ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Accessibility</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Recommend a friend</a></li>
+        <li><a href="emails.html">Email templates</a></li>
+        <li><a href="banners.html">Banners</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Useful links</h5>
+      <ul>
+        <li><a href="#">Compliance policy</a></li>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Tariffs &amp; charges</a></li>
+        <li><a href="#">Terms &amp; conditions</a></li>
+        <li><a href="#">Vulnerability policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Customer area</h5>
+      <ul>
+        <li><a href="#">My account</a></li>
+        <li><a href="#">Make a payment</a></li>
+        <li><a href="#">Broadband speed check</a></li>
+        <li><a href="#">Network status</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap-wide footer-bottom">
+    <small>Company registration: 07412021 &nbsp;&middot;&nbsp; &copy; 2026 hometelecom. All rights reserved.</small>
+    <a href="#" class="footer-trustpilot">
+      <span class="footer-trustpilot-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+      Rated Excellent on Trustpilot
+    </a>
+    <div class="footer-social">
+      <a href="#" aria-label="hometelecom on Facebook"><svg><use href="#i-facebook"/></svg></a>
+      <a href="#" aria-label="hometelecom on LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+      <a href="#" aria-label="hometelecom on Instagram"><svg><use href="#i-instagram"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     Live chat
+     ============================================================ -->
+<div class="chat-widget" id="chat-widget">
+  <div class="chat-panel" id="chat-panel" role="dialog" aria-label="Live chat" aria-hidden="true">
+    <div class="chat-panel-head">
+      <div class="chat-panel-head-info">
+        <strong>hometelecom</strong>
+        <span class="chat-status"><i class="chat-dot" aria-hidden="true"></i>Usually replies in a few minutes</span>
+      </div>
+      <button class="chat-close" id="chat-close" aria-label="Close chat">
+        <svg><use href="#i-close"/></svg>
+      </button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg chat-msg--bot">
+        <p>Hi <span aria-hidden="true">👋</span> How can I help you today?</p>
+      </div>
+      <div class="chat-suggestions" id="chat-suggestions">
+        <button type="button" class="chat-chip" data-reply="broadband">Broadband for my new home</button>
+        <button type="button" class="chat-chip" data-reply="energy">Energy &amp; utilities</button>
+        <button type="button" class="chat-chip" data-reply="order">Track my order</button>
+        <button type="button" class="chat-chip" data-reply="person">Speak to a real person</button>
+      </div>
+    </div>
+    <form class="chat-input-row" id="chat-form" onsubmit="return false">
+      <label class="visually-hidden" for="chat-input">Type a message</label>
+      <input type="text" id="chat-input" placeholder="Type a message&hellip;" autocomplete="off">
+      <button type="submit" class="chat-send" aria-label="Send message">
+        <svg><use href="#i-send"/></svg>
+      </button>
+    </form>
+  </div>
+  <button type="button" class="chat-toggle" id="chat-toggle" aria-expanded="false" aria-controls="chat-panel" aria-label="Open chat">
+    <svg class="chat-toggle-icon-open"><use href="#i-chat"/></svg>
+    <svg class="chat-toggle-icon-close"><use href="#i-close"/></svg>
+  </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
