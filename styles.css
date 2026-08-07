@@ -307,17 +307,6 @@ section{position:relative;}
 .nav-dropdown a:hover{background:var(--mist)!important;color:var(--ink-900)!important;}
 
 .header-actions{display:flex;align-items:center;gap:10px;}
-.header-phone{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:40px;height:40px;
-  border-radius:var(--radius-pill);
-  color:#fff;
-  transition:color .35s var(--ease-out),background-color .2s ease;
-}
-.header-phone:hover{background:rgba(255,255,255,.14);}
-.header-phone svg{width:18px;height:18px;}
-.site-header.is-scrolled .header-phone{color:var(--ink-800);}
-.site-header.is-scrolled .header-phone:hover{background:var(--mist);}
 
 .nav-toggle{
   display:none;
