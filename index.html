@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>hometelecom: Broadband, energy &amp; utilities, sorted in one call</title>
+<meta name="description" content="Big brand broadband, energy, council tax &amp; water, SIMs and Sky TV: set up in minutes with providers you already know, and UK-based support whenever you need it.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     Icon sprite — authored line icons, 1.75px stroke, round joins
+     ============================================================ -->
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="i-wifi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 8.5c5.5-5 14.5-5 20 0"/><path d="M5.5 12.5c3.8-3.4 9.2-3.4 13 0"/><path d="M9 16.4c2-1.7 4-1.7 6 0"/><circle cx="12" cy="19.5" r="1.2" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12.5 2.5 4.5 14h5.8L11 21.5l8-11.5h-5.8z"/>
+    </symbol>
+    <symbol id="i-droplet" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2.8s6.5 7.2 6.5 12.1a6.5 6.5 0 1 1-13 0C5.5 10 12 2.8 12 2.8Z"/>
+    </symbol>
+    <symbol id="i-home" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.5 11 12 3.5 20.5 11"/><path d="M6 9.5V20a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V9.5"/><path d="M10 21v-6h4v6"/>
+    </symbol>
+    <symbol id="i-sim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M7.5 2.5h6L19 8v12a1.6 1.6 0 0 1-1.6 1.6H7.5A1.6 1.6 0 0 1 6 20V4A1.5 1.5 0 0 1 7.5 2.5Z"/><rect x="9" y="9.5" width="6" height="5" rx="1.1"/><path d="M9 11.8h6"/>
+    </symbol>
+    <symbol id="i-tv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2.5" y="5" width="19" height="13" rx="2.2"/><path d="M8.5 21.5h7M12 18v3.5"/><path d="M10.3 9l4 2.5-4 2.5z"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 3.5h3.2L10 8l-2.1 1.6a12 12 0 0 0 6.5 6.5L16 13.9l4.5 1.8V19a1.6 1.6 0 0 1-1.7 1.6C10.6 20.1 3.9 13.4 3.4 5.7A1.6 1.6 0 0 1 5 3.5Z"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21.5s7-6.6 7-12A7 7 0 0 0 5 9.5c0 5.4 7 12 7 12Z"/><circle cx="12" cy="9.5" r="2.4"/>
+    </symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="5" width="18" height="16" rx="2.2"/><path d="M3 9.5h18M8 3v3.5M16 3v3.5"/><path d="M8.5 14l2 2 4.5-4.5"/>
+    </symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2.8 19.5 6v6c0 5-3.4 8.3-7.5 9.7C7.9 20.3 4.5 17 4.5 12V6z"/><path d="M8.7 12.2l2.2 2.2 4.4-4.6"/>
+    </symbol>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="9" cy="8" r="3.2"/><path d="M2.8 20c.7-3.6 3.2-5.6 6.2-5.6s5.5 2 6.2 5.6"/><path d="M15.7 5a3.2 3.2 0 0 1 0 6.2"/><path d="M17.5 14.6c2.6.5 4.4 2.3 5 5.4"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4.5 12.5 9.5 17.5 19.5 6.5"/>
+    </symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4.5 12h15M13 5.5l6.5 6.5-6.5 6.5"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 5l14 14M19 5 5 19"/>
+    </symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5.5 9l6.5 6.5L18.5 9"/>
+    </symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 5.5h16a1 1 0 0 1 1 1V15a1 1 0 0 1-1 1H9.5L5 20v-4H4a1 1 0 0 1-1-1V6.5a1 1 0 0 1 1-1Z"/>
+    </symbol>
+    <symbol id="i-send" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M3 11.5 21 3l-6 18-3.2-7.3L3 11.5Z"/>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M12 2.8l2.7 5.9 6.4.7-4.8 4.4 1.3 6.4L12 16.9l-5.6 3.3 1.3-6.4-4.8-4.4 6.4-.7z"/>
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3v12.5M7 11l5 5 5-5"/><path d="M4.5 19.5h15"/>
+    </symbol>
+    <symbol id="i-facebook" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14.5 21.5V13h2.7l.4-3.2h-3.1V7.7c0-.9.3-1.6 1.7-1.6h1.6V3.2C17.3 3.1 16.2 3 15 3c-2.6 0-4.4 1.6-4.4 4.5v2.3H7.9V13H10.6v8.5Z"/>
+    </symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M7.8 10.2v6.3M7.8 7.6v.1M11.8 16.5v-3.6c0-1.6 1-2.5 2.3-2.5s2.1 1 2.1 2.6v3.5"/>
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".9" fill="currentColor" stroke="none"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============================================================
+     Header
+     ============================================================ -->
+<header class="site-header" id="site-header">
+  <div class="wrap-wide">
+    <a href="#top" class="logo"><b>home</b><span>telecom</span></a>
+
+    <nav class="main-nav" aria-label="Primary">
+      <div class="nav-item">
+        <a href="#">Broadband</a>
+        <div class="nav-dropdown">
+          <a href="#">Fibre broadband</a>
+          <a href="#">Full fibre checker</a>
+          <a href="#">Social tariffs</a>
+          <a href="#">Compare speeds</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">Utilities</a>
+        <div class="nav-dropdown">
+          <a href="#">Energy</a>
+          <a href="#">Water &amp; council tax</a>
+          <a href="#">SIM cards</a>
+          <a href="#">Sky TV</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">Contact us</a>
+        <div class="nav-dropdown">
+          <a href="#">Call 01403 216131</a>
+          <a href="#">Book a callback</a>
+          <a href="#">Live chat</a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#">Customer area</a>
+        <div class="nav-dropdown">
+          <a href="#">My account</a>
+          <a href="#">Make a payment</a>
+          <a href="#">Broadband speed check</a>
+          <a href="#">Network status</a>
+          <a href="#">Support</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:01403216131" class="header-phone" aria-label="Call us on 01403 216131" title="Call 01403 216131">
+        <svg><use href="#i-phone"/></svg>
+      </a>
+      <a href="#" class="btn btn-primary btn-sm">Network Status</a>
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <svg class="icon-menu"><use href="#i-menu"/></svg>
+        <svg class="icon-close"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="site-nav-panel" id="mobile-nav">
+    <a href="#">Broadband</a>
+    <a href="#">Utilities</a>
+    <a href="#">Contact us</a>
+    <a href="#">Customer area</a>
+    <div class="mobile-cta">
+      <a href="#" class="btn btn-primary btn-block">Network Status</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============================================================
+       Hero
+       ============================================================ -->
+  <section class="hero">
+    <div class="wrap-wide hero-inner">
+      <div class="hero-copy">
+        <h1>Get <span class="hero-rotate" id="hero-rotate"><span class="hero-rotate-word is-active">broadband</span><span class="hero-rotate-word">energy</span><span class="hero-rotate-word">utilities</span></span> sorted<br>before you move in.</h1>
+        <p class="lede">One call sets up every provider, so you're never juggling five companies before moving day. Real UK-based support, with contracts that match your tenancy, not the provider's.</p>
+      </div>
+
+      <div class="hero-picker">
+          <form class="checker" id="checker" action="#" onsubmit="return false">
+            <label class="visually-hidden" for="postcode">Enter your postcode</label>
+            <input type="text" id="postcode" name="postcode" placeholder="Postcode for broadband deals" autocomplete="postal-code">
+            <button type="submit" class="btn btn-sky">Check now</button>
+          </form>
+
+          <div class="hero-picker-nav" role="tablist" aria-label="Let's get you started">
+            <button class="hero-picker-tab is-active" role="tab" id="pick-tenant" aria-controls="panel-tenant" aria-selected="true" data-placeholder="Postcode for broadband deals">Tenant's Broadband</button>
+            <button class="hero-picker-tab" role="tab" id="pick-owner" aria-controls="panel-owner" aria-selected="false" tabindex="-1" data-placeholder="Postcode for broadband deals">Home Owners' Broadband</button>
+            <button class="hero-picker-tab" role="tab" id="pick-energy" aria-controls="panel-energy" aria-selected="false" tabindex="-1" data-placeholder="Postcode for energy deals">Energy</button>
+            <button class="hero-picker-tab" role="tab" id="pick-water" aria-controls="panel-water" aria-selected="false" tabindex="-1" data-placeholder="Postcode for water &amp; council tax">Water &amp; Council Tax</button>
+            <button class="hero-picker-tab" role="tab" id="pick-sim" aria-controls="panel-sim" aria-selected="false" tabindex="-1" data-placeholder="Postcode for SIM deals">SIM Cards</button>
+            <button class="hero-picker-tab" role="tab" id="pick-sky" aria-controls="panel-sky" aria-selected="false" tabindex="-1" data-placeholder="Postcode for Sky TV">Sky TV</button>
+          </div>
+        </div>
+
+        <div class="hero-picker-panels">
+          <div class="hero-picker-panel is-active" role="tabpanel" id="panel-tenant" aria-labelledby="pick-tenant">
+            <span class="hero-picker-value">6 months</span>
+            <span class="hero-picker-desc">Minimum contract, no settlement fees if you move again.</span>
+            <a href="#broadband" class="hero-picker-link">Learn more <svg><use href="#i-arrow-right"/></svg></a>
+          </div>
+          <div class="hero-picker-panel" role="tabpanel" id="panel-owner" aria-labelledby="pick-owner" hidden>
+            <span class="hero-picker-value">100%</span>
+            <span class="hero-picker-desc">UK postcode coverage, backed by ISO-certified service.</span>
+            <a href="#broadband" class="hero-picker-link">Learn more <svg><use href="#i-arrow-right"/></svg></a>
+          </div>
+          <div class="hero-picker-panel" role="tabpanel" id="panel-energy" aria-labelledby="pick-energy" hidden>
+            <span class="hero-picker-value">Free</span>
+            <span class="hero-picker-desc">Setup, with a smart meter included as standard.</span>
+            <a href="#energy" class="hero-picker-link">Learn more <svg><use href="#i-arrow-right"/></svg></a>
+          </div>
+          <div class="hero-picker-panel" role="tabpanel" id="panel-water" aria-labelledby="pick-water" hidden>
+            <span class="hero-picker-value">&lt;5 min</span>
+            <span class="hero-picker-desc">Average call time to set up both, completely free.</span>
+            <a href="#utilities" class="hero-picker-link">Learn more <svg><use href="#i-arrow-right"/></svg></a>
+          </div>
+          <div class="hero-picker-panel" role="tabpanel" id="panel-sim" aria-labelledby="pick-sim" hidden>
+            <span class="hero-picker-value">£10.99</span>
+            <span class="hero-picker-desc">Per month, keep your current number and device.</span>
+            <a href="#utilities" class="hero-picker-link">Learn more <svg><use href="#i-arrow-right"/></svg></a>
+          </div>
+          <div class="hero-picker-panel" role="tabpanel" id="panel-sky" aria-labelledby="pick-sky" hidden>
+            <span class="hero-picker-value">350 hrs</span>
+            <span class="hero-picker-desc">Of TV storage, plus a free Netflix account*.</span>
+            <a href="#utilities" class="hero-picker-link">Learn more <svg><use href="#i-arrow-right"/></svg></a>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- ============================================================
+       Partner marquee
+       ============================================================ -->
+  <section class="marquee-section">
+    <p class="marquee-caption">Connecting you to networks and providers you already trust</p>
+    <div class="marquee">
+      <div class="marquee-track">
+        <img src="assets/logos/vodafone.png" alt="Vodafone" loading="lazy">
+        <img src="assets/logos/talktalk.png" alt="TalkTalk" loading="lazy">
+        <img src="assets/logos/virginmediao2.png" alt="Virgin Media O2" loading="lazy">
+        <img src="assets/logos/sky.png" alt="Sky" loading="lazy">
+        <img src="assets/logos/btwholesale.png" alt="BT Wholesale" loading="lazy">
+        <img src="assets/logos/cityfibre.png" alt="CityFibre" loading="lazy">
+        <img src="assets/logos/fullfibre.png" alt="FullFibre" loading="lazy">
+        <img src="assets/logos/freedomfibre.png" alt="Freedom Fibre" loading="lazy">
+        <img src="assets/logos/kcom.png" alt="KCOM" loading="lazy">
+        <img src="assets/logos/fwnetworks.png" alt="F&amp;W Networks" loading="lazy">
+        <img src="assets/logos/msthree.png" alt="MS3" loading="lazy">
+        <img src="assets/logos/vodafone.png" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/logos/talktalk.png" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/logos/virginmediao2.png" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/logos/sky.png" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/logos/btwholesale.png" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/logos/cityfibre.png" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/logos/fullfibre.png" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/logos/freedomfibre.png" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/logos/kcom.png" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/logos/fwnetworks.png" alt="" aria-hidden="true" loading="lazy">
+        <img src="assets/logos/msthree.png" alt="" aria-hidden="true" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Stats band
+       ============================================================ -->
+  <section class="stats-band section-pad-tight">
+    <div class="wrap-wide">
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-num" data-count-to="19000" data-suffix="+">0</div>
+          <div class="stat-label">Customers set up across the UK</div>
+        </div>
+        <div class="stat-card reveal reveal-1">
+          <div class="stat-num" data-count-to="28" data-suffix=" yrs">0</div>
+          <div class="stat-label">Serving UK homes since 1998</div>
+        </div>
+        <div class="stat-card reveal reveal-2">
+          <div class="stat-num" data-count-to="100" data-suffix="%">0</div>
+          <div class="stat-label">UK-based support, real people</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Broadband
+       ============================================================ -->
+  <section class="section-pad" id="broadband">
+    <div class="wrap-wide">
+      <div class="split">
+        <div class="split-copy">
+          <h2>Broadband that moves with you</h2>
+          <p>We're broadband and utility specialists, built for the whole household: flexible contracts, ISO-certified service, and round-the-clock UK-based support.</p>
+          <ul class="feature-list">
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Flexible contracts matching your tenancy agreement</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>National postcode checker with 100% UK coverage</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Contracts from just 6 months, no settlement fees</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Priority installation available when you need it fast</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Relocation assistance if your plans change</li>
+          </ul>
+          <div class="cta-row">
+            <a href="#checker" class="btn btn-primary">Broadband deals</a>
+            <div class="provider-logos">
+              <img src="assets/logos/vodafone.png" alt="Vodafone">
+              <img src="assets/logos/talktalk.png" alt="TalkTalk">
+              <img src="assets/logos/virginmediao2.png" alt="Virgin Media O2">
+              <img src="assets/logos/btwholesale.png" alt="BT Wholesale">
+              <img src="assets/logos/cityfibre.png" alt="CityFibre">
+            </div>
+          </div>
+        </div>
+
+        <div class="split-visual" aria-hidden="true">
+          <div class="panel panel-sky">
+            <div class="panel-inner">
+              <div class="coverage-card">
+                <div class="row" style="border-top:none;padding-top:0;flex-direction:column;align-items:flex-start;gap:6px;">
+                  <span>Postcode checked</span>
+                  <div class="coverage-speed">RH12 · Full Fibre available</div>
+                </div>
+                <div class="row"><strong>CityFibre · Full Fibre 500</strong><span>Avg. 500 Mbps</span></div>
+                <div class="row"><strong>BT Wholesale · FTTP 150</strong><span>Avg. 150 Mbps</span></div>
+                <div class="row"><strong>Freedom Fibre · Gigabit</strong><span>Avg. 900 Mbps</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Energy
+       ============================================================ -->
+  <section class="section-pad" id="energy" style="background:var(--mist)">
+    <div class="wrap-wide">
+      <div class="split reverse">
+        <div class="split-copy">
+          <h2>Don't waste your energy: let us arrange it for you</h2>
+          <p>A quick, hassle-free switch to the best energy providers, with a smart meter included and both fixed and variable tariffs on offer.</p>
+          <ul class="feature-list">
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Completely free to set up</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Quick, easy and hassle-free from start to finish</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Smart meter included as standard</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Connected to the best energy providers in the UK</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Best fixed and variable tariffs available</li>
+          </ul>
+          <div class="cta-row">
+            <a href="#checker" class="btn btn-primary">Energy deals</a>
+            <div class="provider-logos">
+              <img src="assets/logos/britishgas.svg" alt="British Gas">
+              <img src="assets/logos/eon.svg" alt="E.ON">
+              <img src="assets/logos/bunch.png" alt="Bunch">
+            </div>
+          </div>
+        </div>
+
+        <div class="split-visual" aria-hidden="true">
+          <div class="lifestyle-photo lifestyle-photo--energy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Utilities triptych — Council Tax & Water / SIM / Sky TV
+       ============================================================ -->
+  <section class="section-pad" id="utilities">
+    <div class="wrap-wide">
+      <div class="section-head">
+        <h2>Everything else, sorted the same way</h2>
+        <p>The smaller jobs on your move-in list, handled with the same one-call simplicity.</p>
+      </div>
+
+      <div class="triptych">
+        <div class="tri-panel">
+          <div class="tri-icon"><svg><use href="#i-droplet"/></svg></div>
+          <h3>Council tax &amp; water</h3>
+          <p>A free concierge service trusted by lettings agents and tenants, with both services arranged in one call and accounts active from your move-in date.</p>
+          <div class="tri-stat">&lt;5 min</div>
+          <div class="tri-stat-label">Average call time, completely free</div>
+          <ul class="feature-list">
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>No setup fee, ever</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Active from your move-in date</li>
+          </ul>
+          <a href="tel:01403216131" class="text-link">Call us to arrange <svg><use href="#i-arrow-right"/></svg></a>
+        </div>
+
+        <div class="tri-panel">
+          <div class="tri-icon"><svg><use href="#i-sim"/></svg></div>
+          <h3>SIM cards</h3>
+          <p>Stay connected anywhere with a range of bundles, quick network transfer, and no upfront costs.</p>
+          <div class="tri-stat">£10.99</div>
+          <div class="tri-stat-label">Packages from, per month</div>
+          <ul class="feature-list">
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Keep your current number and device</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>A range of bundles to suit you</li>
+          </ul>
+          <a href="#checker" class="text-link">SIM deals <svg><use href="#i-arrow-right"/></svg></a>
+        </div>
+
+        <div class="tri-panel">
+          <div class="tri-icon"><svg><use href="#i-tv"/></svg></div>
+          <h3>Sky TV</h3>
+          <p>Discover a new world of entertainment: all your apps in one menu, with voice control built in.</p>
+          <div class="tri-stat">350 hrs</div>
+          <div class="tri-stat-label">Of TV storage, plus a free Netflix account*</div>
+          <ul class="feature-list">
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>All your apps in one menu</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Voice control function</li>
+          </ul>
+          <a href="#checker" class="text-link">Sky deals <svg><use href="#i-arrow-right"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       How it works
+       ============================================================ -->
+  <section class="section-pad" style="background:var(--mist)">
+    <div class="wrap-wide">
+      <div class="section-head">
+        <h2>How it works</h2>
+        <p>Three steps between where you are now and being fully connected.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <h3>Check availability</h3>
+          <p>Enter your postcode to see the best deals where you're moving to.</p>
+        </div>
+        <div class="step reveal reveal-1">
+          <div class="step-num">2</div>
+          <h3>Choose your plan</h3>
+          <p>Explore packages tailored to your needs, across all the big networks.</p>
+        </div>
+        <div class="step reveal reveal-2">
+          <div class="step-num">3</div>
+          <h3>Get connected</h3>
+          <p>Pick your date and enjoy a quick checkout, and we'll take it from there.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Promise (dusk band)
+       ============================================================ -->
+  <section class="section-pad promise" id="promise">
+    <div class="stars" aria-hidden="true">
+      <div class="cloud-field">
+        <div class="cloud cloud-c" style="background:radial-gradient(closest-side, rgba(255,255,255,.25), rgba(255,255,255,0) 72%); top:10%;"></div>
+        <div class="cloud cloud-g" style="background:radial-gradient(closest-side, rgba(255,255,255,.18), rgba(255,255,255,0) 72%);"></div>
+      </div>
+    </div>
+    <div class="wrap-wide">
+      <div class="promise-grid">
+        <div class="promise-head reveal">
+          <h2>The hometelecom promise</h2>
+          <p>Five things you can count on as a customer. Find another broadband and utility specialist who matches all five, and Sasha will personally call you to match their offer.</p>
+
+          <div class="promise-list">
+            <div class="promise-item"><span class="num">01</span><p>Flexible contracts that move when you do, with no settlement fees</p></div>
+            <div class="promise-item"><span class="num">02</span><p>You choose your installation date</p></div>
+            <div class="promise-item"><span class="num">03</span><p>100% UK-based support: real people on the line</p></div>
+            <div class="promise-item"><span class="num">04</span><p>Installation paused the moment something goes wrong</p></div>
+            <div class="promise-item"><span class="num">05</span><p>Loyalty rewarded, not taken for granted</p></div>
+          </div>
+
+          <div class="promise-cta">
+            <a href="#reviews" class="btn btn-ghost">Why we're different</a>
+          </div>
+        </div>
+
+        <div class="reveal reveal-2">
+          <div class="quote-card">
+            <span class="quote-mark">&ldquo;</span>
+            <p>Every one of these five promises exists because a customer told us what mattered on moving day. If you find another specialist who matches all five, call me and I'll match their offer myself.</p>
+            <div class="quote-person">
+              <div class="quote-avatar">SB</div>
+              <div>
+                <strong>Sasha Barnett</strong>
+                <span>Chief Service Officer, hometelecom</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Recognition
+       ============================================================ -->
+  <section class="section-pad-tight recognition">
+    <div class="wrap-wide">
+      <h2 class="recognition-heading">Recognised across the industry</h2>
+      <div class="badge-row">
+        <img class="award-logo" src="assets/awards/channel-champions.png" alt="Channel Champions Awards 2024: Finalist" loading="lazy">
+        <img class="award-logo award-logo--round" src="assets/awards/best-fibre-employer.png" alt="UK Fibre Awards: Highly Commended, Best Company to Work For, 2024" loading="lazy">
+        <img class="award-logo award-logo--round" src="assets/awards/exec-management-team.png" alt="UK Fibre Awards: Highly Commended, Executive Management Team of the Year, 2024" loading="lazy">
+        <img class="award-logo award-logo--round" src="assets/awards/fibre-awards-2025.png" alt="UK Fibre Awards 2025: Finalist" loading="lazy">
+        <img class="award-logo" src="assets/awards/dynamic-awards.jpg" alt="The Dynamic Awards 2025: Highly Commended" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Reviews / Trustpilot
+       ============================================================ -->
+  <section class="section-pad reviews" id="reviews">
+    <div class="wrap-wide">
+      <div class="reviews-grid">
+        <div class="trust-score reveal">
+          <div class="trust-stars" aria-hidden="true">
+            <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+          </div>
+          <div class="big">4.7 &ldquo;Excellent&rdquo;<br>on Trustpilot</div>
+          <div class="count">19,000+ reviews from tenants, homeowners and landlords across the UK</div>
+          <div class="divider"></div>
+          <a href="#" class="btn btn-outline btn-block">Read our reviews</a>
+        </div>
+
+        <div class="review-points">
+          <h2 style="margin-bottom:8px">What our customers say</h2>
+          <p class="lede" style="margin-bottom:8px">Real feedback from the people we've helped move, verified independently on Trustpilot rather than picked by us.</p>
+          <div class="review-point">
+            <div class="review-point-icon"><svg><use href="#i-users"/></svg></div>
+            <div><h4>Trusted by tenants and landlords alike</h4><p>Letting agents rely on us to get whole properties connected between tenancies.</p></div>
+          </div>
+          <div class="review-point">
+            <div class="review-point-icon"><svg><use href="#i-shield"/></svg></div>
+            <div><h4>Independently verified</h4><p>Every review is collected and published by Trustpilot, not curated by us.</p></div>
+          </div>
+          <div class="review-point">
+            <div class="review-point-icon"><svg><use href="#i-phone"/></svg></div>
+            <div><h4>Real people, real follow-up</h4><p>A UK-based team who pick up the phone when a review flags a problem.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       App section
+       ============================================================ -->
+  <section class="section-pad app-section">
+    <div class="wrap-wide">
+      <div class="app-grid">
+        <div>
+          <h2>Download the app, keep everything in one place</h2>
+          <p class="lede" style="margin-bottom:8px">Track orders, manage your account and stay on top of every service from your phone.</p>
+          <ul class="app-features">
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Track new orders</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>View and manage bills</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Personalised deals and offers</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Manage parental controls</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Report support issues in seconds</li>
+            <li><span class="tick"><svg><use href="#i-check"/></svg></span>Automated service health checks</li>
+          </ul>
+          <div class="store-row">
+            <a href="#" class="store-badge-link" aria-label="Download on the App Store"><img src="assets/badges/apple-store-badge.png" alt="Download on the App Store"></a>
+            <a href="#" class="store-badge-link" aria-label="Get it on Google Play"><img src="assets/badges/google-play-badge.svg" alt="Get it on Google Play"></a>
+          </div>
+        </div>
+
+        <div class="phone-mock-wrap" aria-hidden="true">
+          <div class="phone-mock">
+            <div class="phone-mock-screen">
+              <div class="phone-status"><span>9:41</span><span>●●●●</span></div>
+              <div class="phone-head"><span>Saturday, 22 February</span><h4>Hi Priya 👋</h4></div>
+              <div class="phone-rows">
+                <div class="phone-row">
+                  <div class="phone-row-icon"><svg><use href="#i-wifi"/></svg></div>
+                  <div class="phone-row-text"><strong>Broadband</strong><span>Full Fibre 500 active</span></div>
+                  <div class="phone-row-check"><svg><use href="#i-check"/></svg></div>
+                </div>
+                <div class="phone-row">
+                  <div class="phone-row-icon"><svg><use href="#i-bolt"/></svg></div>
+                  <div class="phone-row-text"><strong>Energy</strong><span>Install: 14 March</span></div>
+                  <div class="phone-row-check"><svg><use href="#i-check"/></svg></div>
+                </div>
+                <div class="phone-row">
+                  <div class="phone-row-icon"><svg><use href="#i-droplet"/></svg></div>
+                  <div class="phone-row-text"><strong>Council tax &amp; water</strong><span>Active from move-in</span></div>
+                  <div class="phone-row-check"><svg><use href="#i-check"/></svg></div>
+                </div>
+                <div class="phone-row">
+                  <div class="phone-row-icon"><svg><use href="#i-sim"/></svg></div>
+                  <div class="phone-row-text"><strong>SIM</strong><span>Choose a plan</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       Contact CTA band
+       ============================================================ -->
+  <section class="section-pad-tight contact-band">
+    <div class="cloud-field" aria-hidden="true">
+      <div class="cloud cloud-a" style="opacity:.35"></div>
+      <div class="cloud cloud-d" style="opacity:.3"></div>
+    </div>
+    <div class="wrap-wide contact-band-inner">
+      <div>
+        <h2>Rather speak to us?</h2>
+        <p>Book a call at a time that suits, or ring us direct for a real person, every time.</p>
+      </div>
+      <div class="contact-band-actions">
+        <a href="#" class="btn btn-sky">Book a call</a>
+        <a href="tel:01403216131" class="btn btn-light-outline">
+          <svg><use href="#i-phone"/></svg>
+          Call 01403 216131
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     Footer
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="wrap-wide footer-top">
+    <div class="footer-brand">
+      <a href="#top" class="logo"><b>home</b><span>telecom</span></a>
+      <p>Broadband and utility specialists, connecting UK homes since 1998: one call, every big brand, real UK-based support.</p>
+      <a href="tel:01403216131" class="footer-phone"><svg><use href="#i-phone"/></svg>01403 216131</a>
+    </div>
+    <div class="footer-col">
+      <h5>Find out more</h5>
+      <ul>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Accessibility</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Partners</a></li>
+        <li><a href="#">Recommend a friend</a></li>
+        <li><a href="emails.html">Email templates</a></li>
+        <li><a href="banners.html">Banners</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Useful links</h5>
+      <ul>
+        <li><a href="#">Compliance policy</a></li>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Tariffs &amp; charges</a></li>
+        <li><a href="#">Terms &amp; conditions</a></li>
+        <li><a href="#">Vulnerability policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Customer area</h5>
+      <ul>
+        <li><a href="#">My account</a></li>
+        <li><a href="#">Make a payment</a></li>
+        <li><a href="#">Broadband speed check</a></li>
+        <li><a href="#">Network status</a></li>
+        <li><a href="#">Support</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap-wide footer-bottom">
+    <small>Company registration: 07412021 &nbsp;·&nbsp; © 2026 hometelecom. All rights reserved.</small>
+    <a href="#" class="footer-trustpilot">
+      <span class="footer-trustpilot-stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+      Rated Excellent on Trustpilot
+    </a>
+    <div class="footer-social">
+      <a href="#" aria-label="hometelecom on Facebook"><svg><use href="#i-facebook"/></svg></a>
+      <a href="#" aria-label="hometelecom on LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+      <a href="#" aria-label="hometelecom on Instagram"><svg><use href="#i-instagram"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     Live chat
+     ============================================================ -->
+<div class="chat-widget" id="chat-widget">
+  <div class="chat-panel" id="chat-panel" role="dialog" aria-label="Live chat" aria-hidden="true">
+    <div class="chat-panel-head">
+      <div class="chat-panel-head-info">
+        <strong>hometelecom</strong>
+        <span class="chat-status"><i class="chat-dot" aria-hidden="true"></i>Usually replies in a few minutes</span>
+      </div>
+      <button class="chat-close" id="chat-close" aria-label="Close chat">
+        <svg><use href="#i-close"/></svg>
+      </button>
+    </div>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-msg chat-msg--bot">
+        <p>Hi <span aria-hidden="true">👋</span> How can I help you today?</p>
+      </div>
+      <div class="chat-suggestions" id="chat-suggestions">
+        <button type="button" class="chat-chip" data-reply="broadband">Broadband for my new home</button>
+        <button type="button" class="chat-chip" data-reply="energy">Energy &amp; utilities</button>
+        <button type="button" class="chat-chip" data-reply="order">Track my order</button>
+        <button type="button" class="chat-chip" data-reply="person">Speak to a real person</button>
+      </div>
+    </div>
+    <form class="chat-input-row" id="chat-form" onsubmit="return false">
+      <label class="visually-hidden" for="chat-input">Type a message</label>
+      <input type="text" id="chat-input" placeholder="Type a message&hellip;" autocomplete="off">
+      <button type="submit" class="chat-send" aria-label="Send message">
+        <svg><use href="#i-send"/></svg>
+      </button>
+    </form>
+  </div>
+  <button type="button" class="chat-toggle" id="chat-toggle" aria-expanded="false" aria-controls="chat-panel" aria-label="Open chat">
+    <svg class="chat-toggle-icon-open"><use href="#i-chat"/></svg>
+    <svg class="chat-toggle-icon-close"><use href="#i-close"/></svg>
+  </button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
