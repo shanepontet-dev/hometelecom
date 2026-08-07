@@ -279,22 +279,23 @@ section{position:relative;}
 .nav-dropdown{
   position:absolute;
   top:100%;left:50%;
-  transform:translate(-50%,4px);
+  transform-origin:top center;
+  transform:translate(-50%,-8px) scale(.94);
   min-width:216px;
   padding:16px 10px;
-  margin-top:10px;
+  margin-top:14px;
   background:var(--paper);
   border:1px solid var(--line);
   border-radius:var(--radius-md);
   box-shadow:var(--shadow-md);
   opacity:0;visibility:hidden;
-  transition:opacity .2s var(--ease-out),transform .2s var(--ease-out),visibility .2s;
+  transition:opacity .25s var(--ease-out),transform .25s var(--ease-out),visibility .25s;
   z-index:10;
 }
 .nav-item:hover .nav-dropdown,
 .nav-item:focus-within .nav-dropdown{
   opacity:1;visibility:visible;
-  transform:translate(-50%,0);
+  transform:translate(-50%,0) scale(1);
 }
 .nav-dropdown a{
   display:block;
@@ -303,10 +304,92 @@ section{position:relative;}
   font-size:.88rem;font-weight:500;
   color:var(--ink-700)!important;
   background:none!important;
+  opacity:0;
+  transform:translateY(-5px);
+  transition:opacity .2s var(--ease-out) var(--stagger,0s),
+             transform .2s var(--ease-out) var(--stagger,0s),
+             background-color .15s ease,color .15s ease;
 }
+.nav-item:hover .nav-dropdown a,
+.nav-item:focus-within .nav-dropdown a{opacity:1;transform:translateY(0);}
+.nav-dropdown a:nth-child(1){--stagger:.03s;}
+.nav-dropdown a:nth-child(2){--stagger:.06s;}
+.nav-dropdown a:nth-child(3){--stagger:.09s;}
+.nav-dropdown a:nth-child(4){--stagger:.12s;}
+.nav-dropdown a:nth-child(5){--stagger:.15s;}
 .nav-dropdown a:hover{background:var(--mist)!important;color:var(--ink-900)!important;}
 
+/* Mega dropdown (Broadband, Utilities): link list + featured cards */
+.nav-dropdown--mega{
+  left:0;
+  transform-origin:top left;
+  transform:translateY(-8px) scale(.97);
+  min-width:640px;
+  max-width:min(680px,calc(100vw - 40px));
+  padding:22px;
+  display:flex;
+  align-items:stretch;
+  gap:0;
+}
+.nav-item--mega:hover .nav-dropdown--mega,
+.nav-item--mega:focus-within .nav-dropdown--mega{
+  transform:translateY(0) scale(1);
+}
+.mega-links{
+  flex:0 0 172px;
+  display:flex;flex-direction:column;
+  gap:2px;
+  padding-right:22px;
+  border-right:1px solid var(--line);
+}
+.mega-link-group + .mega-link-group{margin-top:14px;}
+.mega-cards{flex:1;display:flex;gap:14px;padding-left:22px;}
+.nav-dropdown--mega .mega-card{
+  flex:1;min-width:0;
+  display:block;
+  padding:8px;
+  border-radius:var(--radius-sm);
+  background:none!important;
+  box-shadow:none;
+  transition:opacity .2s var(--ease-out) var(--stagger,0s),
+             transform .2s var(--ease-out) var(--stagger,0s),
+             background-color .2s ease,box-shadow .2s ease;
+}
+.nav-dropdown--mega .mega-card:hover{background:var(--mist)!important;box-shadow:var(--shadow-sm);}
+.mega-card-media{
+  width:100%;
+  aspect-ratio:4/3;
+  border-radius:var(--radius-sm);
+  margin-bottom:10px;
+  background-color:var(--mist-2);
+  background-size:cover;
+  background-position:center;
+}
+.mega-card-media--tenant{background-image:url('assets/images/mega-tenant.jpg');}
+.mega-card-media--homeowner{background-image:url('assets/images/mega-homeowner.jpg');background-position:center 25%;}
+.mega-card-media--energy{background-image:url('assets/images/energy-lifestyle.jpg');}
+.mega-card-media--mobile{background-image:url('assets/images/mega-mobile-entertainment.jpg');background-position:center 15%;}
+.mega-card-media--account{background-image:url('assets/images/mega-account.jpg');background-position:center 78%;}
+.mega-card-media--support{background-image:url('assets/images/mega-support.jpg');background-position:center 70%;}
+.mega-card strong{display:block;font-size:.9rem;font-weight:700;color:var(--ink-900);margin-bottom:3px;}
+.mega-card-desc{display:block;font-size:.78rem;line-height:1.45;color:var(--ink-500);font-weight:400;}
+/* Rightmost nav item (Customer area): open leftward so the wide panel stays on-screen */
+.nav-dropdown--mega-end{left:auto;right:0;transform-origin:top right;}
+
 .header-actions{display:flex;align-items:center;gap:10px;}
+.account-avatar{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:40px;height:40px;
+  flex:none;
+  border-radius:var(--radius-pill);
+  border:1.5px solid rgba(255,255,255,.5);
+  color:#fff;
+  transition:color .35s var(--ease-out),border-color .35s var(--ease-out),background-color .2s ease;
+}
+.account-avatar svg{width:18px;height:18px;}
+.account-avatar:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.8);}
+.site-header.is-scrolled .account-avatar{color:var(--ink-700);border-color:var(--line);}
+.site-header.is-scrolled .account-avatar:hover{background:var(--mist);border-color:var(--ink-900);color:var(--ink-900);}
 
 .nav-toggle{
   display:none;
