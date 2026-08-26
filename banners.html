@@ -14,6 +14,9 @@
     <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
       <path d="M5 3.5h3.2L10 8l-2.1 1.6a12 12 0 0 0 6.5 6.5L16 13.9l4.5 1.8V19a1.6 1.6 0 0 1-1.7 1.6C10.6 20.1 3.9 13.4 3.4 5.7A1.6 1.6 0 0 1 5 3.5Z"/>
     </symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="8.3" r="3.6"/><path d="M4.8 19.4c1.2-3.5 4-5.4 7.2-5.4s6 1.9 7.2 5.4"/>
+    </symbol>
     <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
       <path d="M3.5 6.5h17M3.5 12h17M3.5 17.5h17"/>
     </symbol>
@@ -46,51 +49,94 @@
 
 <header class="site-header" id="site-header">
   <div class="wrap-wide">
-    <a href="index.html#top" class="logo"><b>home</b><span>telecom</span></a>
+    <a href="index.html#top" class="logo"><img src="assets/images/hometelecom-logo.png" alt="HomeTelecom" width="2061" height="198"></a>
 
     <nav class="main-nav" aria-label="Primary">
-      <div class="nav-item">
+      <div class="nav-item nav-item--mega">
         <a href="#">Broadband</a>
-        <div class="nav-dropdown">
-          <a href="#">Fibre broadband</a>
-          <a href="#">Full fibre checker</a>
-          <a href="#">Social tariffs</a>
-          <a href="#">Compare speeds</a>
+        <div class="nav-dropdown nav-dropdown--mega">
+          <div class="mega-links">
+            <a href="#">Fibre broadband</a>
+            <a href="#">Full fibre checker</a>
+            <a href="#">Social tariffs</a>
+            <a href="#">Compare speeds</a>
+          </div>
+          <div class="mega-cards">
+            <a class="mega-card" href="#">
+              <div class="mega-card-media mega-card-media--tenant"></div>
+              <strong>For Tenants</strong>
+              <span class="mega-card-desc">6-month minimum contract, no settlement fees if you move again.</span>
+            </a>
+            <a class="mega-card" href="#">
+              <div class="mega-card-media mega-card-media--homeowner"></div>
+              <strong>For Homeowners</strong>
+              <span class="mega-card-desc">100% UK postcode coverage, backed by ISO-certified service.</span>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="nav-item">
+      <div class="nav-item nav-item--mega">
         <a href="#">Utilities</a>
-        <div class="nav-dropdown">
-          <a href="#">Energy</a>
-          <a href="#">Water &amp; council tax</a>
-          <a href="#">SIM cards</a>
-          <a href="#">Sky TV</a>
+        <div class="nav-dropdown nav-dropdown--mega">
+          <div class="mega-links">
+            <div class="mega-link-group">
+              <a href="#">Energy</a>
+              <a href="#">Water &amp; council tax</a>
+            </div>
+            <div class="mega-link-group">
+              <a href="#">SIM cards</a>
+              <a href="#">Sky TV</a>
+            </div>
+          </div>
+          <div class="mega-cards">
+            <a class="mega-card" href="#">
+              <div class="mega-card-media mega-card-media--energy"></div>
+              <strong>Home essentials</strong>
+              <span class="mega-card-desc">Free setup for energy, water and council tax, sorted in one quick call.</span>
+            </a>
+            <a class="mega-card" href="#">
+              <div class="mega-card-media mega-card-media--mobile"></div>
+              <strong>Mobile &amp; entertainment</strong>
+              <span class="mega-card-desc">SIM plans from £10.99/mo, plus Sky TV with a free Netflix account*.</span>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="nav-item">
-        <a href="#">Contact us</a>
-        <div class="nav-dropdown">
-          <a href="#">Call 01403 216131</a>
-          <a href="#">Book a callback</a>
-          <a href="#">Live chat</a>
-        </div>
-      </div>
-      <div class="nav-item">
+      <div class="nav-item nav-item--mega">
         <a href="#">Customer area</a>
-        <div class="nav-dropdown">
-          <a href="#">My account</a>
-          <a href="#">Make a payment</a>
-          <a href="#">Broadband speed check</a>
-          <a href="#">Network status</a>
-          <a href="#">Support</a>
+        <div class="nav-dropdown nav-dropdown--mega nav-dropdown--mega-end">
+          <div class="mega-links">
+            <div class="mega-link-group">
+              <a href="#">My account</a>
+              <a href="#">Make a payment</a>
+              <a href="#">Broadband speed check</a>
+              <a href="#">Network status</a>
+            </div>
+            <div class="mega-link-group">
+              <a href="#">Support</a>
+              <a href="#">Live chat</a>
+              <a href="#">Book a callback</a>
+              <a href="#">Call 01403 216131</a>
+            </div>
+          </div>
+          <div class="mega-cards">
+            <a class="mega-card" href="#">
+              <div class="mega-card-media mega-card-media--account"></div>
+              <strong>Manage your account</strong>
+              <span class="mega-card-desc">Track orders, pay bills and check your connection, all from your phone.</span>
+            </a>
+            <a class="mega-card" href="#">
+              <div class="mega-card-media mega-card-media--support"></div>
+              <strong>Talk to a real person</strong>
+              <span class="mega-card-desc">UK-based support, usually answered in a few minutes, by chat, callback or phone.</span>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
 
     <div class="header-actions">
-      <a href="tel:01403216131" class="header-phone" aria-label="Call us on 01403 216131" title="Call 01403 216131">
-        <svg><use href="#i-phone"/></svg>
-      </a>
+      <a href="#" class="account-avatar" aria-label="My account" title="My account"><svg><use href="#i-user"/></svg></a>
       <a href="#" class="btn btn-primary btn-sm">Network Status</a>
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
         <svg class="icon-menu"><use href="#i-menu"/></svg>
@@ -102,7 +148,6 @@
   <div class="site-nav-panel" id="mobile-nav">
     <a href="#">Broadband</a>
     <a href="#">Utilities</a>
-    <a href="#">Contact us</a>
     <a href="#">Customer area</a>
     <div class="mobile-cta">
       <a href="#" class="btn btn-primary btn-block">Network Status</a>
@@ -217,7 +262,7 @@
 <footer class="site-footer">
   <div class="wrap-wide footer-top">
     <div class="footer-brand">
-      <a href="index.html#top" class="logo"><b>home</b><span>telecom</span></a>
+      <a href="index.html#top" class="logo"><img src="assets/images/hometelecom-logo.png" alt="HomeTelecom" width="2061" height="198"></a>
       <p>Broadband and utility specialists, connecting UK homes since 1998: one call, every big brand, real UK-based support.</p>
       <a href="tel:01403216131" class="footer-phone"><svg><use href="#i-phone"/></svg>01403 216131</a>
     </div>
@@ -232,6 +277,7 @@
         <li><a href="#">Recommend a friend</a></li>
         <li><a href="emails.html">Email templates</a></li>
         <li><a href="banners.html">Banners</a></li>
+        <li><a href="home2.html">Home page 2</a></li>
       </ul>
     </div>
     <div class="footer-col">
